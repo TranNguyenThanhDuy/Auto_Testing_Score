@@ -21,7 +21,7 @@ edges = cv2.Canny(gray, 50, 200)
 
 
 contours, _ = cv2.findContours(edges.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-contours = sorted(contours, key=cv2.contourArea, reverse=True)[:5]
+contours = sorted(contours, key=cv2.contourArea, reverse=True)[:1]
 
 output = image.copy()
 cv2.drawContours(output, contours, -1, (127, 127, 255), 2)
